@@ -2,15 +2,15 @@
 
 .formInput {
 	border: 2px solid #814ef6;
-	background: linear-gradient(0deg, #383288, #28227c);
+	background: $color-secondary-dark-purple-gradient;
 	border-radius: 12px;
 	font-size: 14px;
-	color: white;
+	color: $color-primary-white;
 	padding: 14px;
 }
 
 .formError {
-	color: rgb(255, 130, 130);
+	color: $color-main-error;
   font-size: 12px;
   margin-top: 4px;
 }

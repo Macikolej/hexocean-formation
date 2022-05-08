@@ -6,6 +6,7 @@ import { dishSerialiser } from "utils/serialisers";
 import { createDish } from "utils/api";
 import { DishForm } from "features/DishForm";
 
+import { SUCCESS, FAILURE } from "./constants";
 import css from "./styles.module.scss";
 
 export const MainPage = () => {
@@ -15,7 +16,7 @@ export const MainPage = () => {
 		return createDish(dishSerialiser(values))
 			.then((res) => {
 				setFlashMessage({
-					type: "SUCCESS",
+					type: SUCCESS,
 					message: `Successfully created a dish with id: ${res.id}`,
 					visible: true,
 				});
@@ -29,8 +30,8 @@ export const MainPage = () => {
 			.catch((err) => {
 				if (err.response.status === 400) {
 					setFlashMessage({
-						type: "FAILURE",
-						message: `Failed to create dish.`,
+						type: FAILURE,
+						message: `Failed to create a dish.`,
 						visible: true,
 					});
 					setTimeout(() => {
@@ -51,7 +52,7 @@ export const MainPage = () => {
 			<div
 				className={cn(css.flash, {
 					[css.flashVisible]: flashMessage.visible,
-					[css.flashFailure]: flashMessage.type === "FAILURE",
+					[css.flashFailure]: flashMessage.type === FAILURE,
 				})}
 			>
 				{flashMessage.message}

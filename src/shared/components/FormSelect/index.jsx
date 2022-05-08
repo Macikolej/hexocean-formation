@@ -7,13 +7,14 @@ export const FormSelect = ({
 	meta: { touched, error },
 	styles,
 	options,
+	theme
 }) => (
 	<>
 		<Select
 			value={value}
 			onChange={onChange}
 			styles={styles}
-			options={options}
+			options={options}			
 		/>
 		{touched && error && <span className={css.FormError}>{error}</span>}
 	</>

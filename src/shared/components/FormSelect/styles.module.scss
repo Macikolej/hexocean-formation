@@ -1,7 +1,7 @@
 @import "shared/styles";
 
 .formError {
-	color: rgb(255, 180, 161);
+	color: $color-main-error;
   font-size: 12px;
   margin-top: 4px;
 }

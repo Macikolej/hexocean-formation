@@ -4,8 +4,8 @@
 	display: flex;
 	height: 100vh;
 	width: 100vw;
-	background: radial-gradient(#3535ad 0,#13094e 100%);
-	font-family: "Space Mono", sans-serif;
+	background: $color-main-background;
+	font-family: $ff-main;
 }
 
 .flash {
@@ -17,8 +17,8 @@
 	font-size: 14px;
 	word-wrap: normal;
 	min-width: max-content;
-	color: white;
-	background: #804df6;
+	color: $color-primary-white;
+	background: $color-primary-dark-purple-gradient;
 	border-radius: 0 0 10px 10px;
 	padding: 12px 24px;
 }
@@ -28,6 +28,6 @@
 }
 
 .flashFailure {
-	color: white;
-	background: rgb(255, 130, 130);
+	color: $color-primary-white;
+	background: $color-main-error;
 }
