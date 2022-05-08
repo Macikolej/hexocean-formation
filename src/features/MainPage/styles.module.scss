@@ -1,6 +1,33 @@
 @import "shared/styles";
 
 .MainPage {
+	display: flex;
 	height: 100vh;
 	width: 100vw;
+	background: radial-gradient(#3535ad 0,#13094e 100%);
+	font-family: "Space Mono", sans-serif;
+}
+
+.flash {
+	transition: transform 300ms;	
+	position: fixed;
+	top: 0;	
+	left: 50%;
+	transform: translateY(-100%) translateX(-50%);	
+	font-size: 14px;
+	word-wrap: normal;
+	min-width: max-content;
+	color: white;
+	background: #804df6;
+	border-radius: 0 0 10px 10px;
+	padding: 12px 24px;
+}
+
+.flashVisible {
+	transform: translateY(0) translateX(-50%);
+}
+
+.flashFailure {
+	color: white;
+	background: rgb(255, 130, 130);
 }

@@ -27,7 +27,7 @@ const styles = {
 	}),
 };
 
-const validatePresence = (value) => {
+const validatePresence = (value) => {	
 	if (!value) {
 		return "This field must be present.";
 	}
@@ -39,16 +39,25 @@ const validatePreparationTime = (duration) => {
 	}
 };
 
-const DishFormComponent = ({ handleSubmit }) => {
+const DishFormComponent = ({ handleSubmit, submitting }) => {
 	return (
-		<form onSubmit={handleSubmit}>
-			<div>
-				<label htmlFor="name">Name</label>
-				<Field name="name" type="text" component={FormInput} required />
+		<form onSubmit={handleSubmit} className={css.DishForm}>
+			<div className={css.formGroup}>				
+				<label htmlFor="name" className={css.formLabel}>
+					Name
+				</label>
+				<Field					
+					name="name"
+					type="text"
+					component={FormInput}
+					required
+				/>
 			</div>
-			<div>
-				<label htmlFor="preparation_time">Preparation time</label>
-				<Field
+			<div className={css.formGroup}>
+				<label htmlFor="preparation_time" className={css.formLabel}>
+					Preparation time
+				</label>
+				<Field					
 					name="preparation_time"
 					type="text"
 					component={FormInput}
@@ -62,8 +71,10 @@ const DishFormComponent = ({ handleSubmit }) => {
 					required
 				/>
 			</div>
-			<div>
-				<label htmlFor="type">Type</label>
+			<div className={css.formGroup}>
+				<label htmlFor="type" className={css.formLabel}>
+					Type
+				</label>
 				<Field
 					name="type"
 					component={(props) => (
@@ -73,7 +84,9 @@ const DishFormComponent = ({ handleSubmit }) => {
 				/>
 			</div>
 			<AdditionalFields />
-			<button type="submit">Submit</button>
+			<button className={css.submitButton} type="submit" disabled={submitting} >
+				{submitting ? "Loading..." : "Submit"}
+			</button>
 		</form>
 	);
 };
