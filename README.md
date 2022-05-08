@@ -8,6 +8,6 @@ Simple dish form made using ReactJS and Redux Form.
 3. Run the project using: *npm start*
 
 **Possible future improvements:**
-    * Convert to typescript
-    * Add mixins
-    * Split into smaller, reusable components
+    * Convert to typescript  
+    * Add mixins  
+    * Split into smaller, reusable components  
