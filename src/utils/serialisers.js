@@ -17,6 +17,8 @@ export const dishSerialiser = (dish) => {
 		break;
 		case SANDWICH:		
 			result.slices_of_bread = parseInt(dish.slices_of_bread)
+		break;
+		default:
 	}
 
 	return result;

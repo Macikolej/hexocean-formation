@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 import { Field, reduxForm } from "redux-form";
-import Select from "react-select";
 
 import { FormInput } from "shared/components/FormInput";
 import { FormSelect } from "shared/components/FormSelect";
